@@ -1,3 +1,15 @@
+# ***Archival Notice***
+This repository has been archived.
+
+As a result all of its historical issues and PRs have been closed.
+
+Please *do not clone* this repo without understanding the risk in doing so:
+- It may have unaddressed security vulnerabilities
+- It may have unaddressed bugs
+
+<details>
+   <summary>Click for historical readme</summary>
+
 # 🥪 The Jaffle Shop 🦘
 
 This is a sandbox project for exploring the basic functionality and latest features of dbt. It's based on a fictional restaurant called the Jaffle Shop that serves [jaffles](https://en.wikipedia.org/wiki/Pie_iron).
@@ -10,11 +22,11 @@ This README will guide you through setting up the project on dbt Cloud. Working 
 Ready to go? Grab some water and a nice snack, and let's dig in!
 
 <div>
- <a href="https://www.loom.com/share/a90b383eea594a0ea41e91af394b2811?t=0&sid=da832f06-c08e-43e7-acae-a2a3d8d191bd">
+ <a href=&quot;https://www.loom.com/share/a90b383eea594a0ea41e91af394b2811?t=0&amp;sid=da832f06-c08e-43e7-acae-a2a3d8d191bd&quot;>
    <p>Welcome to the Jaffle Shop - Watch Intro Video</p>
  </a>
- <a href="https://www.loom.com/share/a90b383eea594a0ea41e91af394b2811?t=0&sid=da832f06-c08e-43e7-acae-a2a3d8d191bd">
-   <img style="max-width:300px;" src="https://cdn.loom.com/sessions/thumbnails/a90b383eea594a0ea41e91af394b2811-with-play.gif">
+ <a href=&quot;https://www.loom.com/share/a90b383eea594a0ea41e91af394b2811?t=0&amp;sid=da832f06-c08e-43e7-acae-a2a3d8d191bd&quot;>
+   <img style=&quot;max-width:300px;&quot; src=&quot;https://cdn.loom.com/sessions/thumbnails/a90b383eea594a0ea41e91af394b2811-with-play.gif&quot;>
  </a>
 </div>
 
@@ -46,7 +58,7 @@ Ready to go? Grab some water and a nice snack, and let's dig in!
 ## 📓 Create new repo from template
 
 1. <details>
-   <summary>Click the green "Use this template" button at the top of the page to create a new repository from this template.</summary>
+   <summary>Click the green &quot;Use this template&quot; button at the top of the page to create a new repository from this template.</summary>
 
    ![Click 'Use this template'](/.github/static/use-template.gif)
    </details>
@@ -64,7 +76,7 @@ Ready to go? Grab some water and a nice snack, and let's dig in!
 
 3. Choose the repo you created in Step 1 of the **Create new repo from template** section as the repository for your dbt Project's codebase.
 
-<img width="500" alt="Repo selection in dbt Cloud" src="https://github.com/dbt-labs/jaffle-shop/assets/91998347/daac5bbc-097c-4d57-9628-0c85d348e4a4">
+<img width=&quot;500&quot; alt=&quot;Repo selection in dbt Cloud&quot; src=&quot;https://github.com/dbt-labs/jaffle-shop/assets/91998347/daac5bbc-097c-4d57-9628-0c85d348e4a4&quot;>
 
 ### 🏁 Checkpoint
 
@@ -90,10 +102,10 @@ You're now ready to start developing with dbt Cloud! Choose a path below (either
 
 There are a few ways to load the data for the project:
 
-- **Using the sample data in the repo**. Add `"jaffle-data"` to the `seed-paths` config in your `dbt_project.yml` as below. This means that when dbt is scanning folders for `seeds` to load it will look in both the `seeds` folder as is default, but _also_ the `jaffle-data` folder which contains a sample of the project data. Seeds are static data files in CSV format that dbt will upload, usually for reference models, like US zip codes mapped to country regions for example, but in this case the feature is hacked to do some data ingestion. This is not what seeds are meant to be used for (dbt is not a data loading tool), but it's useful for this project to give you some data to get going with quickly. Run a `dbt seed` and when it's done either delete the `jaffle-data` folder, remove `jaffle-data` from the `seed-paths` list, or ideally, both.
+- **Using the sample data in the repo**. Add `&quot;jaffle-data&quot;` to the `seed-paths` config in your `dbt_project.yml` as below. This means that when dbt is scanning folders for `seeds` to load it will look in both the `seeds` folder as is default, but _also_ the `jaffle-data` folder which contains a sample of the project data. Seeds are static data files in CSV format that dbt will upload, usually for reference models, like US zip codes mapped to country regions for example, but in this case the feature is hacked to do some data ingestion. This is not what seeds are meant to be used for (dbt is not a data loading tool), but it's useful for this project to give you some data to get going with quickly. Run a `dbt seed` and when it's done either delete the `jaffle-data` folder, remove `jaffle-data` from the `seed-paths` list, or ideally, both.
 
 ```yaml dbt_project.yml
-seed-paths: ["seeds", "jaffle-data"]
+seed-paths: [&quot;seeds&quot;, &quot;jaffle-data&quot;]
 ```
 
 ```bash
@@ -137,17 +149,17 @@ dbt Cloud has a powerful abstraction called an Environment. An Environment in db
 
 2. On the Environment page, click `+ Create Environment`.
 
-   <img width="500" alt="create_environment" src="https://github.com/dbt-labs/jaffle-shop/assets/91998347/2fd8039a-8fde-4d7d-84c3-0a30d56fd61f">
+   <img width=&quot;500&quot; alt=&quot;create_environment&quot; src=&quot;https://github.com/dbt-labs/jaffle-shop/assets/91998347/2fd8039a-8fde-4d7d-84c3-0a30d56fd61f&quot;>
 
 3. Name your Environment `Prod` and set it as a `Production` Environment.
 
-   <img width="391" alt="prod_env" src="https://github.com/dbt-labs/jaffle-shop/assets/91998347/845d4a31-5a39-4550-944a-ca5bb7b90e55">
+   <img width=&quot;391&quot; alt=&quot;prod_env&quot; src=&quot;https://github.com/dbt-labs/jaffle-shop/assets/91998347/845d4a31-5a39-4550-944a-ca5bb7b90e55&quot;>
 
 4. Fill out the credentials with your warehouse connection details, in real production you'll want to make a Service Account or similar and only give access to the production schema to that user, so that only dbt Cloud Jobs can build into production. For this demo project, it's okay to just use your account credentials.
 
 5. Set the `branch` that this Environment runs on to `main`, then the schema that this Environment builds into to `prod`. This ensures that Jobs configured in this Environment always build into the `prod` schema and run on the `main` branch which we've protected as our production branch.
 
-   <img width="500" alt="custom_branch_main" src="https://github.com/dbt-labs/jaffle-shop/assets/91998347/163764c6-bc3c-490b-b262-47e6c71553c9">
+   <img width=&quot;500&quot; alt=&quot;custom_branch_main&quot; src=&quot;https://github.com/dbt-labs/jaffle-shop/assets/91998347/163764c6-bc3c-490b-b262-47e6c71553c9&quot;>
 
 6. Click `Save`.
 
@@ -159,7 +171,7 @@ Now we'll create a Job to deploy our project to production. This Job will run th
 
 2. Click `+ Create Job` and choose `Deploy Job` as the Job type.
 
-   <img width="500" alt="create_job" src="https://github.com/dbt-labs/jaffle-shop/assets/91998347/9eda2a35-edac-4ad5-b5f4-d273ab3e5351">
+   <img width=&quot;500&quot; alt=&quot;create_job&quot; src=&quot;https://github.com/dbt-labs/jaffle-shop/assets/91998347/9eda2a35-edac-4ad5-b5f4-d273ab3e5351&quot;>
 
 3. Name your Job `Production Build`.
 
@@ -167,7 +179,7 @@ Now we'll create a Job to deploy our project to production. This Job will run th
 
 5. Click into your newly created Job and click `Run Now` in the top right corner.
 
-   <img width="500" alt="run_now" src="https://github.com/dbt-labs/jaffle-shop/assets/91998347/78cbf863-619a-4213-babe-d26b94363e84">
+   <img width=&quot;500&quot; alt=&quot;run_now&quot; src=&quot;https://github.com/dbt-labs/jaffle-shop/assets/91998347/78cbf863-619a-4213-babe-d26b94363e84&quot;>
 
 6. This will kick off a Job to build your project in the `Prod` Environment, which will build into the `prod` schema in your warehouse.
 
@@ -176,7 +188,7 @@ Now we'll create a Job to deploy our project to production. This Job will run th
 > [!TIP]
 > If you're working in the dbt Cloud IDE, make sure to turn on the 'Defer to staging/production' toggle once you've done this. This will ensure that only modified code is run when you run commands in the IDE, compared against the Production environment you just set up. This will save you significant time and resources!
 
-<img width="500" alt="Screenshot 2024-04-09 at 7 44 36 PM" src="https://github.com/dbt-labs/jaffle-shop/assets/91998347/9cdba3b0-6c64-4c40-8380-80c0ec619214">
+<img width=&quot;500&quot; alt=&quot;Screenshot 2024-04-09 at 7 44 36 PM&quot; src=&quot;https://github.com/dbt-labs/jaffle-shop/assets/91998347/9cdba3b0-6c64-4c40-8380-80c0ec619214&quot;>
 
 > [!TIP]
 > The dbt Cloud CLI will automatically defer unmodified models to the previously built models in your staging or production environment, so you can run `dbt build`, `dbt test`, etc without worrying about running unnecessary code.
@@ -185,7 +197,7 @@ Now we'll create a Job to deploy our project to production. This Job will run th
 
 From here, you should be able to use dbt Explorer (in the `Explore` tab of the dbt Cloud nav bar) to explore your DAG! Explorer is populated with metadata from your designated Production and Staging Environments, so you can see the lineage of your project visually, and much more.
 
-<img width="991" alt="explorer" src="https://github.com/dbt-labs/jaffle-shop/assets/91998347/68b98e29-0e10-461b-80e5-e7665b010c07">
+<img width=&quot;991&quot; alt=&quot;explorer&quot; src=&quot;https://github.com/dbt-labs/jaffle-shop/assets/91998347/68b98e29-0e10-461b-80e5-e7665b010c07&quot;>
 
 ### 🏭 Working with a larger dataset
 
@@ -288,3 +300,4 @@ At present, the popular SQL linter and formatter SQLFluff doesn't play nicely wi
 We have kept a `.sqlfluff` config file to show what that looks like, and to future proof the repo for when the Cloud CLI support linting and formatting.
 
 [^1]: Again, I can't emphasize enough that you should not use dbt and seeds for data loading in a production project. This is just for convenience within this learning project.
+
